@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import StarRating from "./StarRating";
+import token from "./assets/constant";
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "f84fc31d";
+const KEY = token;
 
 export default function App() {
   const [query, setQuery] = useState("");

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
-const KEY = "f84fc31d";
+import token from "./assets/constant";
+
+const code = { token };
 
 export function useMovies(query) {
   const [movies, setMovies] = useState([]);
@@ -19,7 +21,7 @@ export function useMovies(query) {
           setError("");
 
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            `http://www.omdbapi.com/?apikey=${code}&s=${query}`,
             { signal: controller.signal }
           );
 
